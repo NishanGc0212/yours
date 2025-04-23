@@ -1,0 +1,176 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Crimson Text', serif;
+  text-align: center;
+  background: #f7e0e0; /* Light Pink background */
+  color: #2c3e50;
+  overflow-x: hidden;
+  height: 100vh;
+  position: relative;
+}
+
+/* Container setup */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Title Animation */
+.title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #f39c12; /* Light Red color */
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+/* Input Section */
+.input-container {
+  margin-top: 30px;
+  animation: fadeIn 1s forwards;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 1.2rem;
+  width: 250px;
+  margin-top: 10px;
+  border: 2px solid #f39c12; /* Light Red border */
+  border-radius: 5px;
+}
+
+button {
+  background-color: #f39c12; /* Light Red background */
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e67e22; /* Darker Red when hovered */
+}
+
+/* Poem Section */
+.poem {
+  display: none;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  line-height: 1.2;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+/* Quote Section */
+.quote {
+  display: none;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #f39c12; /* Light Red color */
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #f39c12; /* Light Red color */
+}
+
+em {
+  font-style: italic;
+  color: #e74c3c; /* Deep Red */
+}
+
+/* Heart-Shaped Button */
+.click-me-btn {
+  display: inline-block;
+  background-color: #e74c3c; /* Red heart color */
+  color: white;
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  position: relative;
+ 
+}
+
+.click-me-btn:hover {
+  background-color: #c0392b; /* Dark Red */
+  transform: scale(1.1);
+}
+
+.click-me-btn:before {
+  content: '\2764';  /* Heart icon */
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Floating Hearts Animation */
+@keyframes floatingHearts {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-50px); opacity: 0.5; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.heart {
+  position: absolute;
+  font-size: 2rem;
+  color: red;
+  animation: floatingHearts 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+.heart1 { top: 10%; left: 15%; animation-delay: 0s; }
+.heart2 { top: 30%; left: 35%; animation-delay: 1s; }
+.heart3 { top: 50%; left: 55%; animation-delay: 2s; }
+.heart4 { top: 70%; left: 75%; animation-delay: 3s; }
+
